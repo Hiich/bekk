@@ -435,15 +435,15 @@ function App() {
   }
 
   const VideoGalleryData = [
-    {
-      src: nft107,
-    },
-    {
-      src: nft120,
-    },
-    {
-      src: nft171,
-    },
+    // {
+    //   src: nft107,
+    // },
+    // {
+    //   src: nft120,
+    // },
+    // {
+    //   src: nft171,
+    // },
     {
       src: nft95,
     },
@@ -628,7 +628,7 @@ function App() {
         <CommunityGrid />
         <GuitarVideo />
         <VideoGalleryIntro />
-        {/* <VideoGallery /> */}
+        <VideoGallery />
         <GuitarLoader />
         <Concept1 />
         <Concept2 />
