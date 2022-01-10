@@ -628,7 +628,7 @@ function App() {
         <CommunityGrid />
         <GuitarVideo />
         <VideoGalleryIntro />
-        <VideoGallery />
+        {/* <VideoGallery /> */}
         <GuitarLoader />
         <Concept1 />
         <Concept2 />
