@@ -1,0 +1,35 @@
+footer {
+  color: white;
+  text-align: start;
+  padding: 10% 5%;
+  border-top: 1px solid white;
+}
+
+footer .footerLogo {
+  width: 70%;
+  margin: 10px 0;
+}
+
+footer ul {
+  color: white;
+  list-style-type: none;
+}
+
+footer ul li {
+  font-family: "UniversCnBold", sans-serif;
+  font-weight: bold;
+}
+footer p {
+  font-family: "UniversCnBold", sans-serif;
+  font-weight: bold;
+  width: 25rem;
+}
+
+@media only screen and (max-width: 768px) {
+  footer p {
+    font-family: "UniversCnBold", sans-serif;
+    font-weight: bold;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}

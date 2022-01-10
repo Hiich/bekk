@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #101110;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Neil';
+  src: url('./fonts/NeilBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UniversBold';
+  src: local('UniversBold') url('./fonts/UniversBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UniversCnBold';
+  src: local('UniversCnBold') url('./fonts/UniversCnBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UniversRegular';
+  src: local('UniversRegular') url('./fonts/UniversRegular.ttf') format('truetype');
+}

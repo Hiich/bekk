@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x8991cCdC3b65c34D09590f743fA08c608Cc6E25D",
+  "SCAN_LINK": "https://etherscan.io/token/0x1c1024Cf1D08428eB45f4904211799fF1609E27a",
+  "NETWORK": {
+    "NAME": "Ethereum",
+    "SYMBOL": "ETH",
+    "ID": 4
+  },
+  "NFT_NAME": "Bekk",
+  "SYMBOL": "Bekk",
+  "MAX_SUPPLY": 170,
+  "WEI_COST": 300000000000000000,
+  "DISPLAY_COST": 0.3,
+  "GAS_LIMIT": 185000,
+  "MARKETPLACE": "Opensea",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/louisbekk",
+  "SHOW_BACKGROUND": true
+}

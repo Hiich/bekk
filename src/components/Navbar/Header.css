@@ -1,0 +1,50 @@
+.logo {
+  margin: 30pt;
+  margin-left: 40pt;
+  height: 30px;
+}
+
+.NavBarWithLogo {
+  display: flex;
+  justify-content: safe;
+}
+
+.NavBar {
+  display: flex;
+  flex: 0.8;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.text {
+  color: white;
+  letter-spacing: 10px;
+  font-family: "UniversCnBold", sans-serif;
+  font-weight: bold;
+  font-size: x-small;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    padding: 5%;
+    width: 40%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+@media (max-width: 567px) {
+  .logo {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    margin: 0;
+  }
+  .NavBarWithLogo {
+    display: block;
+  }
+  .text {
+    font-size: small;
+  }
+}
