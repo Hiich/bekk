@@ -48,7 +48,7 @@ function App() {
     NFT_NAME: 'Bekk',
     SYMBOL: 'BK',
     MAX_SUPPLY: 170,
-    WEI_COST: 0,
+    WEI_COST: 3000000000000000000,
     DISPLAY_COST: 0.3,
     GAS_LIMIT: 80000,
     MARKETPLACE: 'Opensea',
@@ -249,8 +249,6 @@ function App() {
                   <select onChange={handleChange} defaultValue="1">
                     <option>1</option>
                     <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
                   </select>
                 </label>
               </div>
@@ -362,7 +360,7 @@ function App() {
       setClaimingStatus('Minting')
       console.log('public mint')
       blockchain.smartContract.methods
-        .mint(blockchain.account, mintAmount, 1)
+        .mint(blockchain.account, mintAmount)
         .send({
           gasLimit: String(totalGasLimit),
           to: CONFIG.CONTRACT_ADDRESS,
@@ -422,8 +420,6 @@ function App() {
                   <select onChange={handleChange} defaultValue="1">
                     <option>1</option>
                     <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
                   </select>
                 </label>
               </div>
