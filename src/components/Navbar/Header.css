@@ -2,6 +2,8 @@
   margin: 30pt;
   margin-left: 40pt;
   height: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .NavBarWithLogo {
@@ -14,6 +16,8 @@
   flex: 0.8;
   justify-content: space-around;
   align-items: center;
+  z-index: 1;
+  position: relative;
 }
 
 .text {

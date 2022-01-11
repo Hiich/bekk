@@ -10,23 +10,23 @@ import Slider from 'react-slick'
 import layer1 from './images/music-Studio-layer-1.png'
 import layer2 from './images/music-Studio-layer-2.png'
 import guitar from './images/gitter.png'
-import nft21 from './videos/Nft-2-1 (1).mp4'
-import BottomImage from './images/sec3_bg_img.png'
+import nft21 from './videos/Nft-2-1.mp4'
+import BottomImage from './images/blue_bg.png'
 import BottomImage2 from './images/sec3_bg_img (1).png'
 import TheArtist from './images/The-artist.png'
 import Community from './images/Community.png'
 import AccessPass from './images/Access-pass.png'
 import Metaverse from './images/Metaverse.png'
-import nft107 from './videos/Nft-107-8 (1).mp4'
-import nft11 from './videos/Nft-11-1 (1).mp4'
-import nft120 from './videos/Nft-120-21 (1).mp4'
-import nft171 from './videos/Nft-171-72 (1).mp4'
-import nft95 from './videos/Nft-95-119 (1).mp4'
-import nftSuper1 from './videos/Nft-Super-1-Finish-1 (1).mp4'
-import nftSuper4 from './videos/Nft-Super-4-Finish-4 (1).mp4'
+import nft107 from './videos/Nft-107-8.mp4'
+import nft11 from './videos/Nft-11-1.mp4'
+import nft120 from './videos/Nft-120-21.mp4'
+import nft171 from './videos/Nft-171-72.mp4'
+import nft95 from './videos/Nft-95-119.mp4'
+import nftSuper1 from './videos/Nft-Super-1-Finish-1.mp4'
+import nftSuper4 from './videos/Nft-Super-4-Finish-4.mp4'
 import guitarBlue from './images/guitar_blue.png'
-import imgLeft from './images/img_left.png'
-import conceptBG from './images/Concept-BG.png'
+import imgLeft from './images/concept.jpg'
+import conceptBG from './images/light_grey.png'
 import conceptBGImage from './images/section10_bg_img.png'
 import accordionIcon from './images/accordion_icon.png'
 import saxophone from './images/sexophone.png'
@@ -34,7 +34,13 @@ import { connect } from './redux/blockchain/blockchainActions'
 import { fetchData } from './redux/data/dataActions'
 import { Provider, useDispatch, useSelector } from 'react-redux'
 import store from './redux/store'
-import blockchainReducer from './redux/blockchain/blockchainReducer'
+import blockchainReducer from './redux/blockchain/blockchainReducer';
+import Hofa from "../src/images/Hofa.png"
+import belairfineart from "../src/images/belairfineart.png"
+import { Prev } from 'react-bootstrap/esm/PageItem'
+import prev from '../src/images/left-arrow.png'
+import Next from '../src/images/right-arrow.png'
+
 
 function App() {
   const [CONFIG, SET_CONFIG] = useState({
@@ -67,14 +73,14 @@ function App() {
     {
       title1: 'Step 2',
       title2: 'Metaverse development',
-      data:
-        'Signature of long-term partnership with LandVault to finish our Art Center on Sandbox. It will start with a social hub and contests on a specific part of our 3x3 land, before expanding to the rest of the services!',
+      data: 'Signature of long-term partnership with LandVault to design & integrate music contest on our Sandbox Metaverse estate.',
+      data: 'We will start by creating a social hub and a few games on a 1x1 land on our 3x3 and continue building from there! Signature of long-term partnership with LandVault to finish our Art Center on Sandbox. It will start with a social hub and contests on a specific part of our 3x3 land, before expanding to the rest of the services!',
     },
     {
       title1: 'Step 3',
       title2: 'Partnerships',
       data:
-        'We are currently negotiating partnerships with music labels and iconic management companies. Holding one of our NFT will give you EXCLUSIVE access to join superstars virtually in our studio as a « viewer », but also show your talent in front of music insiders in the Metaverse.',
+        'Partnerships with talent agencies and music labels. Holding one of our NFT will give you the chance to show your talent in front of music celebrities in the Metaverse.',
     },
     {
       title1: 'Step 4',
@@ -116,7 +122,8 @@ function App() {
 
   const GuitarBanner = () => {
     return (
-      <div className="background">
+      <div className="background bg_section_one">
+        <div className='back_two_img'></div>
         <div className="img_ani">
           <div className="animated one">
             <img src={layer1} width={'100%'} alt="Layer-1" />
@@ -128,26 +135,27 @@ function App() {
             <img src={layer2} width={'100%'} alt="Layer-3" />
           </div>
         </div>
+        <div id="section2" className='section2_img'>
+          <video
+            id="Image"
+            autoPlay
+            loop
+            muted
+            playsInline="true"
+            className="Image"
+            src={nft21}
+            alt="sample"
+          />
+          <img
+                className="image-background"
+                src={conceptBG}
+                alt="ConceptImageBackground"
+              />
+        </div>
       </div>
     )
   }
 
-  const AnimImage = () => {
-    return (
-      <div className="background" id="section2">
-        <video
-          id="Image"
-          autoPlay
-          loop
-          muted
-          playsInline="true"
-          className="Image"
-          src={nft21}
-          alt="sample"
-        />
-      </div>
-    )
-  }
 
   const SoundAndMusic = () => {
     const dispatch = useDispatch()
@@ -203,11 +211,11 @@ function App() {
           alt="BottomImage"
           src={BottomImage}
         />
-        <img
+        {/* <img
           className="section3-bottom-image"
           alt="BottomImage"
           src={BottomImage2}
-        />
+        /> */}
         <h2>
           A SUPERNATURAL
           <br />
@@ -435,15 +443,12 @@ function App() {
   }
 
   const VideoGalleryData = [
-    // {
-    //   src: nft107,
-    // },
-    // {
-    //   src: nft120,
-    // },
-    // {
-    //   src: nft171,
-    // },
+    {
+      src: nft120,
+    },
+    {
+      src: nft171,
+    },
     {
       src: nft95,
     },
@@ -455,6 +460,25 @@ function App() {
     },
   ]
 
+  useEffect(() => {
+  //   var vid = document.getElementById("Image");
+  //   vid.addEventListener('loadedmetadata', function () {
+  //     var duration = vid.duration;
+  //    console.log(duration,'555')
+  // });
+  var aud = document.getElementById('Image');
+
+aud.ontimeupdate = function(){myFunction()};
+
+function myFunction(){
+  console.log(document.getElementById('image-background'))
+    if(aud.currentTime > 5.0){
+      var element = document.getElementById("section2");
+      element.classList.add("show");
+    }
+};
+  }, [document.getElementById("Image")])
+
   const VideoGallery = () => {
     return (
       <Slider
@@ -465,6 +489,8 @@ function App() {
         centerMode
         centerPadding={0}
         speed={500}
+        prevArrow={<button type='button' className='slick-prev'><img src={prev} /></button>}
+        nextArrow={<button type='button' className='slick-next'><img src={Next} /></button>}
         responsive={[
           {
             breakpoint: 991,
@@ -475,7 +501,7 @@ function App() {
             },
           },
           {
-            breakpoint: 567,
+            breakpoint: 576,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -495,6 +521,7 @@ function App() {
         className="section7 background"
       >
         {VideoGalleryData.map((result, index) => {
+          {console.log(result,"okkkk")}
           return (
             <video
               id={`video${index}`}
@@ -513,18 +540,18 @@ function App() {
     )
   }
 
-  const GuitarLoader = () => {
-    return (
-      <div className="section8 background">
-        <img
-          id="BlueGuitar"
-          className="img"
-          src={guitarBlue}
-          alt="BurningGuitar"
-        />
-      </div>
-    )
-  }
+  // const GuitarLoader = () => {
+  //   return (
+  //     <div className="section8 background">
+  //       <img
+  //         id="BlueGuitar"
+  //         className="img"
+  //         src={guitarBlue}
+  //         alt="BurningGuitar"
+  //       />
+  //     </div>
+  //   )
+  // }
   const Concept1 = () => {
     return (
       <div className="section9 background">
@@ -540,16 +567,12 @@ function App() {
             </div>
             <div className="col-md-5 ps-md-5">
               <h2 className="title">CONCEPT</h2>
-              <h2 className="italic">Louis Bekk:</h2>
+              {/* <h2 className="italic">Louis Bekk:</h2> */}
               <h2 className="detail">
-                I teamed up with the graphic designer Augustin Goupy to bring
-                you at the deepest of my artistic world with 170 uniquely
-                designed visuals and unreleased songs composed by me. Buying one
-                of these NFT will give you access to:
+                I teamed up with the graphic designer Augustin Goupy to bring you at the deepest of my artistic world with 170 uniquely designed visuals and unreleased songs composed by me. Buying one of these NFT will give you access to:
                 <ul className="ulli_tag">
                   <li>
-                    - A secret whitelist for the next collections (3D music
-                    instruments playable in the Metaverse)
+                    - A secret whitelist for the next collections (3D music instruments playable in the Metaverse)
                   </li>
                   <li>- My Art Center on Sandbox for free</li>
                 </ul>
@@ -566,7 +589,7 @@ function App() {
         <div className="container">
           <div className="row">
             <div className="col-md-7 ps-5 re-text">
-              <h2 className="title">GALLERIE'S EXHIBITIONS</h2>
+              <h2 className="title">EXHIBITIONS</h2>
               <h2 className="detail">
                 Far from the algorithmically-generated pfp that you will find
                 everywhere else, these NFT are exclusive pieces of artistic
@@ -577,6 +600,10 @@ function App() {
                   <li>- “Winter Collection” (BEL-AIR Fine Art, Courchevel)</li>
                 </ul>
               </h2>
+              <div className='sec10_ul_img'>
+                <img src={Hofa}></img>
+                <img src={belairfineart}></img>
+              </div>
             </div>
             <div className="col-md-5 position-relative">
               <img
@@ -623,23 +650,15 @@ function App() {
       <Provider store={store}>
         <NavBar className="background" />
         <GuitarBanner />
-        <AnimImage />
+        {/* <AnimImage /> */}
         <SoundAndMusic />
         <CommunityGrid />
         <GuitarVideo />
         <VideoGalleryIntro />
         <VideoGallery />
-        <GuitarLoader />
+        {/* <GuitarLoader /> */}
         <Concept1 />
         <Concept2 />
-
-        <div className="section10-sexophone background">
-          <img
-            className="section10-sexophone-image"
-            src={saxophone}
-            alt="BurningGuitar"
-          />
-        </div>
         <RoadMap />
         <Footer />
       </Provider>

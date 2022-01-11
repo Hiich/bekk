@@ -9,6 +9,12 @@ footer .footerLogo {
   width: 70%;
   margin: 10px 0;
 }
+footer ul li a {
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 24px;
+}
 
 footer ul {
   color: white;
