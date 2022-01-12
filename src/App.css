@@ -58,7 +58,7 @@
 
 .image-background{
   position: absolute;
-  width: 55%;
+  width: 65%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -133,7 +133,7 @@
 }
 
 .Image {
-  height: 60vh;
+  height: 72vh;
   width: auto;
   opacity: 0;
   position: relative;
@@ -146,11 +146,11 @@
   -moz-animation-name: ImageTransform;
   -ms-animation-name: ImageTransform;
   -o-animation-name: ImageTransform;
-  animation-duration: 5s;
-  -webkit-animation-duration: 5s;
-  -moz-animation-duration: 5s;
-  -ms-animation-duration: 5s;
-  -o-animation-duration: 5s;
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  -o-animation-duration: 3s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
   opacity: 1;
@@ -165,12 +165,12 @@
   50% {
     transform: rotate3d(1, 1, 1, 180deg) scale(0.5);
     margin-top: 50vh;
-    height: 30vh;
+    height: 36vh;
   }
   100% {
     transform: rotate3d(1, 1, 1, 360deg) scale(1);
     margin-top: 0;
-    height: 60vh;
+    height: 72vh;
   }
 }
 @-webkit-keyframes ImageTransform {
@@ -187,7 +187,7 @@
   100% {
     -webkit-transform: rotate3d(1, 1, 1, 360deg);
     margin-top: 0;
-    height: 60vh;
+    height: 72vh;
   }
 }
 @-moz-keyframes ImageTransform {
@@ -199,7 +199,7 @@
   to {
     -moz-transform: rotate3d(1, 1, 1, 360deg);
     margin-top: 0;
-    height: 60vh;
+    height: 72vh;
   }
 }
 @-o-keyframes ImageTransform {
@@ -212,7 +212,7 @@
   to {
     -o-transform: rotate3d(1, 1, 1, 360deg);
     margin-top: 0;
-    height: 60vh;
+    height: 72vh;
     width: auto;
   }
 }
@@ -932,7 +932,8 @@
   }
   .section7 {
     background-position: bottom;
-    background-size: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .slick-slider .slick-prev {
     left: 2%;
@@ -948,12 +949,18 @@
   }
 }
 @media (max-width: 567px) {
+  .section9-image {
+    height: 350px;
+  }
+  .img_ani {
+    height: 55vh;
+  }
   .Image{
     width:100%;
   }
   .image-background {
-    width: 100%;
-    height: 150%;
+    width: 110%;
+    height: 110%;
   }
   .section3 label,.section6 label{
     width: 100%;
@@ -1015,6 +1022,29 @@
 }
 
 @media (max-width: 450px) {
+  @keyframes ImageTransform {
+    0% {
+      transform: rotate3d(1, 1, 1, 0deg) scale(0);
+      margin-top: 50vh;
+      height: 10vh;
+    }
+    50% {
+      transform: rotate3d(1, 1, 1, 180deg) scale(0.8);
+      margin-top: 25vh;
+      height: 25vh;
+    }
+    100% {
+      transform: rotate3d(1, 1, 1, 360deg) scale(1);
+      margin-top: 0;
+      height: 50vh;
+    }
+  }
+  .Image {
+    margin-bottom: 0px;
+    height: 50vh;
+    width: 80%;
+  }
+
   .accordion-body {
     font-size: medium;
   }
@@ -1041,11 +1071,9 @@
   .section5 img {
     width: 100%;
   }
-  .AnimateImage,
-  .Image {
+  .AnimateImage {
     margin-bottom: 0px;
-    height: auto;
-    width: 70%;
+    width: 80%;
   }
   .section3 h2 {
     font-size: xx-large;
