@@ -1021,24 +1021,35 @@
   }
 }
 
-@media (max-width: 450px) {
-  @keyframes ImageTransform {
-    0% {
-      transform: rotate3d(1, 1, 1, 0deg) scale(0);
-      margin-top: 50vh;
-      height: 10vh;
-    }
-    50% {
-      transform: rotate3d(1, 1, 1, 180deg) scale(0.8);
-      margin-top: 25vh;
-      height: 25vh;
-    }
-    100% {
-      transform: rotate3d(1, 1, 1, 360deg) scale(1);
-      margin-top: 0;
-      height: 50vh;
-    }
+
+@keyframes ImageTransform450 {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg) scale(0);
+    margin-top: 50vh;
+    height: 10vh;
   }
+  50% {
+    transform: rotate3d(1, 1, 1, 180deg) scale(0.8);
+    margin-top: 25vh;
+    height: 25vh;
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg) scale(1);
+    margin-top: 0;
+    height: 50vh;
+  }
+}
+
+@media (max-width: 450px) {
+  
+  .Image.active {
+    animation-name: ImageTransform450;
+    -webkit-animation-name: ImageTransform450;
+    -moz-animation-name: ImageTransform450;
+    -ms-animation-name: ImageTransform450;
+    -o-animation-name: ImageTransform450;
+  }
+
   .Image {
     margin-bottom: 0px;
     height: 50vh;
