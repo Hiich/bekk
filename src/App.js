@@ -227,7 +227,7 @@ function App() {
           <br />
           AND MUSIC
         </h2>
-        {/* {console.log(blockchain.account)}
+        {console.log(blockchain.account)}
         {blockchain.account === '' || blockchain.account === null ? (
           <a
             href="javascript:void(0)"
@@ -262,13 +262,7 @@ function App() {
               </div>
             )}
           </>
-        )} */}
-        <br />
-        <h2>
-          Sales are paused, all Friends & Family spots have been claimed.
-          <br />
-          Comme back for our public launch later this week !
-        </h2>
+        )}
       </div>
     )
   }
@@ -405,7 +399,7 @@ function App() {
           <br />
           170 ART PIECES
         </h3>
-        {/* {blockchain.account === '' || blockchain.account === null ? (
+        {blockchain.account === '' || blockchain.account === null ? (
           <a
             href="javascript:void(0)"
             onClick={(e) => {
@@ -439,13 +433,7 @@ function App() {
               </div>
             )}
           </>
-        )} */}
-        <br />
-        <h2>
-          Sales are paused, all Friends & Family spots have been claimed.
-          <br />
-          Comme back for our public launch later this week !
-        </h2>
+        )}
       </div>
     )
   }
