@@ -44,19 +44,19 @@ import Next from '../src/images/right-arrow.png'
 
 function App() {
   const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: '0x8991cCdC3b65c34D09590f743fA08c608Cc6E25D ',
+    CONTRACT_ADDRESS: '0x9f4375a632e982ea282214f8d8d9531262fa34a9 ',
     SCAN_LINK: '',
     NETWORK: {
       NAME: 'Ethereum',
       SYMBOL: 'ETH',
-      ID: 4,
+      ID: 1,
     },
     NFT_NAME: 'Bekk',
     SYMBOL: 'BK',
     MAX_SUPPLY: 170,
     WEI_COST: 300000000000000000,
     DISPLAY_COST: 0.3,
-    GAS_LIMIT: 185000,
+    GAS_LIMIT: 180000,
     MARKETPLACE: 'Opensea',
     MARKETPLACE_LINK: '',
     SHOW_BACKGROUND: false,
@@ -179,7 +179,7 @@ function App() {
       setClaimingStatus('Minting')
       console.log('public mint')
       blockchain.smartContract.methods
-        .mint(blockchain.account, mintAmount, 1)
+        .mint(blockchain.account, mintAmount)
         .send({
           gasLimit: String(totalGasLimit),
           to: CONFIG.CONTRACT_ADDRESS,
@@ -257,8 +257,6 @@ function App() {
                   <select onChange={handleChange} defaultValue="1">
                     <option>1</option>
                     <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
                   </select>
                 </label>
               </div>
@@ -370,7 +368,7 @@ function App() {
       setClaimingStatus('Minting')
       console.log('public mint')
       blockchain.smartContract.methods
-        .mint(blockchain.account, mintAmount, 1)
+        .mint(blockchain.account, mintAmount)
         .send({
           gasLimit: String(totalGasLimit),
           to: CONFIG.CONTRACT_ADDRESS,
@@ -430,8 +428,6 @@ function App() {
                   <select onChange={handleChange} defaultValue="1">
                     <option>1</option>
                     <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
                   </select>
                 </label>
               </div>

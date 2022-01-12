@@ -1,10 +1,10 @@
 {
-  "CONTRACT_ADDRESS": "0x8991cCdC3b65c34D09590f743fA08c608Cc6E25D",
+  "CONTRACT_ADDRESS": "0x9f4375a632e982ea282214f8d8d9531262fa34a9",
   "SCAN_LINK": "https://etherscan.io/token/0x1c1024Cf1D08428eB45f4904211799fF1609E27a",
   "NETWORK": {
     "NAME": "Ethereum",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Bekk",
   "SYMBOL": "Bekk",
