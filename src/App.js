@@ -67,7 +67,7 @@ function App() {
       title1: 'STEP 1',
       title2: 'Minting',
       data:
-        'The mint starts on 10th January 2022  18:00 CEST time. Everyone that is whitelisted has a 24-hour window to mint their reserved NFT. The mint price is 0.3 ETH. The reveal will happen once the collection is sold out, after that you will be able to purchase on the secondary market through Opensea.',
+        'The "friends and family" mint starts on 12th January 2022 20:00 CEST time. Everyone that is whitelisted has a 24-hour window to mint their NFTs. The public mint will happen on 14th January 2022. The mint price is 0.3 ETH. The reveal will happen once the collection is sold out, after that you will be able to purchase on the secondary market through Opensea.', 
     },
     {
       title1: 'STEP 2',
