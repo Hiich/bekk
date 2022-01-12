@@ -238,6 +238,15 @@
   border: 3px solid rgba(255,255,255,0.5);
   border-radius: 40px;
   color: white;
+
+  z-index: 1;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+}
+
+.section3 select:focus, .section6 select:focus{
+  outline: none;
 }
 
 .section3-bottom-image {
