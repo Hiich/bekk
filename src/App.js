@@ -65,25 +65,25 @@ function App() {
   const html = document.documentElement
   const accordianData = [
     {
-      title1: 'Step 1',
+      title1: 'STEP 1',
       title2: 'Minting',
       data:
         'The mint starts on 10th January 2022  18:00 CEST time. Everyone that is whitelisted has a 24-hour window to mint their reserved NFT. The mint price is 0.3 ETH. The reveal will happen once the collection is sold out, after that you will be able to purchase on the secondary market through Opensea.',
     },
     {
-      title1: 'Step 2',
+      title1: 'STEP 2',
       title2: 'Metaverse development',
       data: 'Signature of long-term partnership with LandVault to design & integrate music contest on our Sandbox Metaverse estate.',
       data: 'We will start by creating a social hub and a few games on a 1x1 land on our 3x3 and continue building from there! Signature of long-term partnership with LandVault to finish our Art Center on Sandbox. It will start with a social hub and contests on a specific part of our 3x3 land, before expanding to the rest of the services!',
     },
     {
-      title1: 'Step 3',
+      title1: 'STEP 3',
       title2: 'Partnerships',
       data:
         'Partnerships with talent agencies and music labels. Holding one of our NFT will give you the chance to show your talent in front of music celebrities in the Metaverse.',
     },
     {
-      title1: 'Step 4',
+      title1: 'STEP 4',
       title2: '3D instruments collection',
       data:
         'Mint of the 3D music instrument collection. Holders of Louis Bekk NFTs will have free and exclusive access to the mint.',
@@ -461,6 +461,8 @@ function App() {
   ]
 
   useEffect(() => {
+    // console.log(getSlider,'5888')
+    // getSlider[0].setAttribute=('id','slider-item');
   //   var vid = document.getElementById("Image");
   //   vid.addEventListener('loadedmetadata', function () {
   //     var duration = vid.duration;
@@ -481,35 +483,56 @@ function myFunction(){
 
   const VideoGallery = () => {
     return (
+      <div id='slider-item'>
       <Slider
         focusOnSelect
         infinite
         arrows
-        slidesToShow={3}
+        slidesToShow={1}
         centerMode
-        centerPadding={0}
+        centerPadding={'400px'}
         speed={500}
         prevArrow={<button type='button' className='slick-prev'><img src={prev} /></button>}
         nextArrow={<button type='button' className='slick-next'><img src={Next} /></button>}
         responsive={[
           {
-            breakpoint: 991,
+            breakpoint: 1380,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
+              centerPadding:'340px'
+            },
+          },
+          {
+            breakpoint: 1200,
+            settings: {
+              centerPadding:'250px'
+            },
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              centerPadding:'200px'
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
               adaptiveHeight: true,
+              centerPadding:'40px'
             },
           },
           {
             breakpoint: 576,
             settings: {
+              centerPadding:'40px',
               slidesToShow: 1,
               slidesToScroll: 1,
             },
           },
         ]}
         afterChange={() => {
-          const videos = document.getElementsByClassName('slick-active')
+          const videos = document.getElementsByClassName('slick-slide')
           Array.prototype.forEach.call(videos, (video) => {
             video.getElementsByTagName('video')[0].pause()
           })
@@ -518,10 +541,9 @@ function myFunction(){
             .getElementsByTagName('video')[0]
           videoToPlay.play()
         }}
-        className="section7 background"
+        className="center section7 background"
       >
         {VideoGalleryData.map((result, index) => {
-          {console.log(result,"okkkk")}
           return (
             <video
               id={`video${index}`}
@@ -537,6 +559,7 @@ function myFunction(){
         })}
         {/* <div className="background" /> */}
       </Slider>
+      </div>
     )
   }
 
@@ -554,7 +577,7 @@ function myFunction(){
   // }
   const Concept1 = () => {
     return (
-      <div className="section9 background">
+      <div className="section9 background" id='concept'>
         <div className="container">
           <div className="row">
             <div className="col-md-7 position-relative">
@@ -620,7 +643,8 @@ function myFunction(){
 
   const RoadMap = () => {
     return (
-      <div className="section11 background">
+      <div className="section11 background" id='roadmap'>
+        <h3 class="mb-5">ROADMAP</h3>
         <Accordion className="container" defaultActiveKey="0">
           {accordianData.map((result, index) => {
             return (

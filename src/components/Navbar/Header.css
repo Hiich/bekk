@@ -8,7 +8,9 @@
 
 .NavBarWithLogo {
   display: flex;
-  justify-content: safe;
+  justify-content: flex-start;
+  position: absolute;
+  width: 100%;
 }
 
 .NavBar {
