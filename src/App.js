@@ -37,13 +37,12 @@ import { connect } from './redux/blockchain/blockchainActions'
 import { fetchData } from './redux/data/dataActions'
 import { Provider, useDispatch, useSelector } from 'react-redux'
 import store from './redux/store'
-import blockchainReducer from './redux/blockchain/blockchainReducer';
-import Hofa from "../src/images/Hofa.png"
-import belairfineart from "../src/images/belairfineart.png"
+import blockchainReducer from './redux/blockchain/blockchainReducer'
+import Hofa from '../src/images/Hofa.png'
+import belairfineart from '../src/images/belairfineart.png'
 import { Prev } from 'react-bootstrap/esm/PageItem'
 import prev from '../src/images/left-arrow.png'
 import Next from '../src/images/right-arrow.png'
-
 
 function App() {
   const [CONFIG, SET_CONFIG] = useState({
@@ -77,8 +76,7 @@ function App() {
       title1: 'STEP 2',
       title2: 'Metaverse development',
       images: accordionIcon2,
-      data: 'Signature of long-term partnership with LandVault to design & integrate music contest on our Sandbox Metaverse estate.',
-      data: 'We will start by creating a social hub and a few games on a 1x1 land on our 3x3 and continue building from there! Signature of long-term partnership with LandVault to finish our Art Center on Sandbox. It will start with a social hub and contests on a specific part of our 3x3 land, before expanding to the rest of the services!',
+      data: 'Signature of long-term partnership with LandVault to design & integrate music contest on our Sandbox Metaverse estate. We will start by creating a social hub and a few games on a 1x1 land on our 3x3 and continue building from there!',
     },
     {
       title1: 'STEP 3',
@@ -128,7 +126,7 @@ function App() {
   const GuitarBanner = () => {
     return (
       <div className="background bg_section_one">
-        <div className='back_two_img'></div>
+        <div className="back_two_img"></div>
         <div className="img_ani">
           <div className="animated one">
             <img src={layer1} width={'100%'} alt="Layer-1" />
@@ -140,7 +138,7 @@ function App() {
             <img src={layer2} width={'100%'} alt="Layer-3" />
           </div>
         </div>
-        <div id="section2" className='section2_img'>
+        <div id="section2" className="section2_img">
           <video
             id="Image"
             autoPlay
@@ -152,15 +150,14 @@ function App() {
             alt="sample"
           />
           <img
-                className="image-background"
-                src={conceptBG}
-                alt="ConceptImageBackground"
-              />
+            className="image-background"
+            src={conceptBG}
+            alt="ConceptImageBackground"
+          />
         </div>
       </div>
     )
   }
-
 
   const SoundAndMusic = () => {
     const dispatch = useDispatch()
@@ -464,102 +461,112 @@ function App() {
   useEffect(() => {
     // console.log(getSlider,'5888')
     // getSlider[0].setAttribute=('id','slider-item');
-  //   var vid = document.getElementById("Image");
-  //   vid.addEventListener('loadedmetadata', function () {
-  //     var duration = vid.duration;
-  //    console.log(duration,'555')
-  // });
-  var aud = document.getElementById('Image');
+    //   var vid = document.getElementById("Image");
+    //   vid.addEventListener('loadedmetadata', function () {
+    //     var duration = vid.duration;
+    //    console.log(duration,'555')
+    // });
+    var aud = document.getElementById('Image')
 
-aud.ontimeupdate = function(){myFunction()};
-
-function myFunction(){
-  console.log(document.getElementById('image-background'))
-    if(aud.currentTime > 5.0){
-      var element = document.getElementById("section2");
-      element.classList.add("show");
+    aud.ontimeupdate = function () {
+      myFunction()
     }
-};
-  }, [document.getElementById("Image")])
+
+    function myFunction() {
+      console.log(document.getElementById('image-background'))
+      if (aud.currentTime > 5.0) {
+        var element = document.getElementById('section2')
+        element.classList.add('show')
+      }
+    }
+  }, [document.getElementById('Image')])
 
   const VideoGallery = () => {
     return (
-      <div id='slider-item'>
-      <Slider
-        focusOnSelect
-        infinite
-        arrows
-        slidesToShow={1}
-        centerMode
-        centerPadding={'400px'}
-        speed={500}
-        prevArrow={<button type='button' className='slick-prev'><img src={prev} /></button>}
-        nextArrow={<button type='button' className='slick-next'><img src={Next} /></button>}
-        responsive={[
-          {
-            breakpoint: 1380,
-            settings: {
-              centerPadding:'340px'
+      <div id="slider-item">
+        <Slider
+          focusOnSelect
+          infinite
+          arrows
+          slidesToShow={1}
+          centerMode
+          centerPadding={'400px'}
+          speed={500}
+          prevArrow={
+            <button type="button" className="slick-prev">
+              <img src={prev} />
+            </button>
+          }
+          nextArrow={
+            <button type="button" className="slick-next">
+              <img src={Next} />
+            </button>
+          }
+          responsive={[
+            {
+              breakpoint: 1380,
+              settings: {
+                centerPadding: '340px',
+              },
             },
-          },
-          {
-            breakpoint: 1200,
-            settings: {
-              centerPadding:'250px'
+            {
+              breakpoint: 1200,
+              settings: {
+                centerPadding: '250px',
+              },
             },
-          },
-          {
-            breakpoint: 992,
-            settings: {
-              centerPadding:'200px'
+            {
+              breakpoint: 992,
+              settings: {
+                centerPadding: '200px',
+              },
             },
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              adaptiveHeight: true,
-              centerPadding:'40px'
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                adaptiveHeight: true,
+                centerPadding: '40px',
+              },
             },
-          },
-          {
-            breakpoint: 576,
-            settings: {
-              centerPadding:'40px',
-              slidesToShow: 1,
-              slidesToScroll: 1,
+            {
+              breakpoint: 576,
+              settings: {
+                centerPadding: '40px',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
             },
-          },
-        ]}
-        afterChange={() => {
-          const videos = document.getElementsByClassName('slick-slide')
-          Array.prototype.forEach.call(videos, (video) => {
-            video.getElementsByTagName('video')[0].pause()
-          })
-          const videoToPlay = document
-            .getElementsByClassName('slick-active slick-center')[0]
-            .getElementsByTagName('video')[0]
-          videoToPlay.play()
-        }}
-        className="center section7 background"
-      >
-        {VideoGalleryData.map((result, index) => {
-          return (
-            <video
-              id={`video${index}`}
-              autoPlay={index === 0}
-              loop
-              muted
-              playsInline="true"
-              key={index}
-              className="shadow1 col-md-4"
-              src={result.src}
-            />
-          )
-        })}
-        {/* <div className="background" /> */}
-      </Slider>
+          ]}
+          afterChange={() => {
+            const videos = document.getElementsByClassName('slick-slide')
+            Array.prototype.forEach.call(videos, (video) => {
+              video.getElementsByTagName('video')[0].pause()
+            })
+            const videoToPlay = document
+              .getElementsByClassName('slick-active slick-center')[0]
+              .getElementsByTagName('video')[0]
+            videoToPlay.play()
+          }}
+          className="center section7 background"
+        >
+          {VideoGalleryData.map((result, index) => {
+            return (
+              <video
+                id={`video${index}`}
+                autoPlay={index === 0}
+                loop
+                muted
+                playsInline="true"
+                key={index}
+                className="shadow1 col-md-4"
+                src={result.src}
+              />
+            )
+          })}
+          {/* <div className="background" /> */}
+        </Slider>
       </div>
     )
   }
@@ -578,7 +585,7 @@ function myFunction(){
   // }
   const Concept1 = () => {
     return (
-      <div className="section9 background" id='concept'>
+      <div className="section9 background" id="concept">
         <div className="container">
           <div className="row">
             <div className="col-md-7 position-relative">
@@ -593,10 +600,14 @@ function myFunction(){
               <h2 className="title">CONCEPT</h2>
               {/* <h2 className="italic">Louis Bekk:</h2> */}
               <h2 className="detail">
-                I teamed up with the graphic designer Augustin Goupy to bring you at the deepest of my artistic world with 170 uniquely designed visuals and unreleased songs composed by me. Buying one of these NFT will give you access to:
+                I teamed up with the graphic designer Augustin Goupy to bring
+                you at the deepest of my artistic world with 170 uniquely
+                designed visuals and unreleased songs composed by me. Buying one
+                of these NFT will give you access to:
                 <ul className="ulli_tag">
                   <li>
-                    - A secret whitelist for the next collections (3D music instruments playable in the Metaverse)
+                    - A secret whitelist for the next collections (3D music
+                    instruments playable in the Metaverse)
                   </li>
                   <li>- My Art Center on Sandbox for free</li>
                 </ul>
@@ -624,7 +635,7 @@ function myFunction(){
                   <li>- “Winter Collection” (BEL-AIR Fine Art, Courchevel)</li>
                 </ul>
               </h2>
-              <div className='sec10_ul_img'>
+              <div className="sec10_ul_img">
                 <img src={Hofa}></img>
                 <img src={belairfineart}></img>
               </div>
@@ -644,7 +655,7 @@ function myFunction(){
 
   const RoadMap = () => {
     return (
-      <div className="section11 background" id='roadmap'>
+      <div className="section11 background" id="roadmap">
         <h3 class="mb-5">ROADMAP</h3>
         <Accordion className="container" defaultActiveKey="0">
           {accordianData.map((result, index) => {
