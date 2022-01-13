@@ -28,7 +28,10 @@ import guitarBlue from './images/guitar_blue.png'
 import imgLeft from './images/concept.jpg'
 import conceptBG from './images/light_grey.png'
 import conceptBGImage from './images/section10_bg_img.png'
-import accordionIcon from './images/accordion_icon.png'
+import accordionIcon1 from './images/Minting.png'
+import accordionIcon2 from './images/metaverse-development.png'
+import accordionIcon3 from './images/partnerships.png'
+import accordionIcon4 from './images/3D-instrument-collection.png'
 import saxophone from './images/sexophone.png'
 import { connect } from './redux/blockchain/blockchainActions'
 import { fetchData } from './redux/data/dataActions'
@@ -67,24 +70,26 @@ function App() {
     {
       title1: 'STEP 1',
       title2: 'Minting',
-      data:
-        'The mint starts on 10th January 2022  18:00 CEST time. Everyone that is whitelisted has a 24-hour window to mint their reserved NFT. The mint price is 0.3 ETH. The reveal will happen once the collection is sold out, after that you will be able to purchase on the secondary market through Opensea.',
+      images: accordionIcon1,
+      data:   'The mint starts on 10th January 2022  18:00 CEST time. Everyone that is whitelisted has a 24-hour window to mint their reserved NFT. The mint price is 0.3 ETH. The reveal will happen once the collection is sold out, after that you will be able to purchase on the secondary market through Opensea.',
     },
     {
       title1: 'STEP 2',
       title2: 'Metaverse development',
+      images: accordionIcon2,
       data: 'Signature of long-term partnership with LandVault to design & integrate music contest on our Sandbox Metaverse estate.',
       data: 'We will start by creating a social hub and a few games on a 1x1 land on our 3x3 and continue building from there! Signature of long-term partnership with LandVault to finish our Art Center on Sandbox. It will start with a social hub and contests on a specific part of our 3x3 land, before expanding to the rest of the services!',
     },
     {
       title1: 'STEP 3',
       title2: 'Partnerships',
-      data:
-        'Partnerships with talent agencies and music labels. Holding one of our NFT will give you the chance to show your talent in front of music celebrities in the Metaverse.',
+      images: accordionIcon3,
+      data:   'Partnerships with talent agencies and music labels. Holding one of our NFT will give you the chance to show your talent in front of music celebrities in the Metaverse.',
     },
     {
       title1: 'STEP 4',
       title2: '3D instruments collection',
+      images: accordionIcon4,
       data:
         'Mint of the 3D music instrument collection. Holders of Louis Bekk NFTs will have free and exclusive access to the mint.',
     },
@@ -651,7 +656,7 @@ function myFunction(){
                       <li>{result.title1}</li>
                       <li>{result.title2}</li>
                       <li>
-                        <img src={accordionIcon} alt="AccordionIcon" />
+                        <img src={result.images} alt="AccordionIcon" />
                       </li>
                     </ul>
                   </div>
