@@ -399,7 +399,7 @@ function App() {
         <h3 className="mb-5">
           IMMERSION INTO THE
           <br />
-          163 ART PIECES
+          162 ART PIECES
         </h3>
         {blockchain.account === '' || blockchain.account === null ? (
           <a
