@@ -70,19 +70,22 @@ function App() {
       title1: 'STEP 1',
       title2: 'Minting',
       images: accordionIcon1,
-      data:   'The mint starts on 15th January 2022  18:00 CEST time. Everyone that is whitelisted has a 24-hour window to mint their reserved NFT. The mint price is 0.3 ETH. The reveal will happen once the collection is sold out, after that you will be able to purchase on the secondary market through Opensea.',
+      data:
+        'The mint starts on 15th January 2022  18:00 CEST time. Everyone that is whitelisted has a 24-hour window to mint their reserved NFT. The mint price is 0.3 ETH. The reveal will happen once the collection is sold out, after that you will be able to purchase on the secondary market through Opensea.',
     },
     {
       title1: 'STEP 2',
       title2: 'Metaverse development',
       images: accordionIcon2,
-      data: 'Signature of long-term partnership with LandVault to design & integrate music contest on our Sandbox Metaverse estate. We will start by creating a social hub and a few games on a 1x1 land on our 3x3 and continue building from there!',
+      data:
+        'Signature of long-term partnership with LandVault to design & integrate music contest on our Sandbox Metaverse estate. We will start by creating a social hub and a few games on a 1x1 land on our 3x3 and continue building from there!',
     },
     {
       title1: 'STEP 3',
       title2: 'Partnerships',
       images: accordionIcon3,
-      data:   'Partnerships with talent agencies and music labels. Holding one of our NFT will give you the chance to show your talent in front of music celebrities in the Metaverse.',
+      data:
+        'Partnerships with talent agencies and music labels. Holding one of our NFT will give you the chance to show your talent in front of music celebrities in the Metaverse.',
     },
     {
       title1: 'STEP 4',
@@ -171,6 +174,27 @@ function App() {
       }
     }
 
+    const releasePayment = () => {
+      let gasLimit = CONFIG.GAS_LIMIT
+      blockchain.smartContract.methods
+        .release(blockchain.account)
+        .send({
+          gasLimit: String(gasLimit),
+          to: CONFIG.CONTRACT_ADDRESS,
+          from: blockchain.account,
+        })
+        .once('error', (err) => {
+          console.log(err)
+          setClaimingStatus('Begin')
+        })
+        .then((receipt) => {
+          console.log(receipt)
+          // setClaimingNft(false);
+          setClaimingStatus('Done')
+          dispatch(fetchData())
+        })
+    }
+
     const claimNFTs = (mintAmount) => {
       let cost = CONFIG.WEI_COST
       let gasLimit = CONFIG.GAS_LIMIT
@@ -229,7 +253,13 @@ function App() {
           <br />
           AND MUSIC
         </h2>
-        {console.log(blockchain.account)}
+        <h2>
+          SOLD OUT !<br />
+          You can buy NFTs on secondary market
+        </h2>
+        <br />
+        <a href="https://opensea.io/collection/louisbekk-nft">Louis Bekk NFT</a>
+        {/* {console.log(blockchain.account)}
         {blockchain.account === '' || blockchain.account === null ? (
           <a
             href="javascript:void(0)"
@@ -264,7 +294,7 @@ function App() {
               </div>
             )}
           </>
-        )}
+        )} */}
       </div>
     )
   }
@@ -401,7 +431,13 @@ function App() {
           <br />
           162 ART PIECES
         </h3>
-        {blockchain.account === '' || blockchain.account === null ? (
+        <h2>
+          SOLD OUT !<br />
+          You can buy NFTs on secondary market
+        </h2>
+        <br />
+        <a href="https://opensea.io/collection/louisbekk-nft">Louis Bekk NFT</a>
+        {/* {blockchain.account === '' || blockchain.account === null ? (
           <a
             href="javascript:void(0)"
             onClick={(e) => {
@@ -435,7 +471,7 @@ function App() {
               </div>
             )}
           </>
-        )}
+        )} */}
       </div>
     )
   }
